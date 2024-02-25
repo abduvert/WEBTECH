@@ -1,0 +1,152 @@
+*{
+    font-family: sans-serif;
+
+}
+.prflecontainer{
+    background-color: #022a3a;
+    padding: 1em;
+    /* border-radius:25px ; */
+}
+
+img{
+    margin-right: 1em;
+    float: right;    
+    border-radius: 400px;
+    width: 150px;
+    height: auto;
+    border: 2px solid rgb(255, 253, 253);
+    overflow: hidden;
+}
+
+.header{
+    
+    color: white;
+    line-height: 1em;
+    overflow: hidden;
+    margin-left: 1em;
+}
+.footer{
+    display: flex;
+    flex-direction: row;
+    background-color: #022a3a;
+    width: 100%;
+    /* height: 200px; */
+    justify-content: space-around;
+    padding-bottom: 2em;
+    padding-top: 1em;
+    align-items: left;
+    color: white;
+    /* line-height: 1em; */
+    /* overflow: hidden; */
+ 
+}
+.youtube{
+    margin: 0;
+}
+
+.first, .second{
+    align-items: center;
+}
+.work{
+    margin-left: 1em;
+    display: flex;
+}
+.workexp{
+    margin-right: 1em;
+    float: left;
+    font-size: 50px;
+    height: 5em;
+    width: 10em;
+}
+.skills{
+    margin-left: 1em;
+    display: flex;
+}
+.sk{
+    margin-right: 1em;
+    float: left;
+    font-size: 50px;
+    height: 2em;
+    width: 5em;
+}
+
+
+.rowline{
+    color: black;
+    width: 95%;
+    float: left;
+    margin-right: 1em;
+}
+
+.youtube{
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    height: fit-content;
+    /* margin-right: 2em; */
+    
+}
+.Free{
+    line-height: 1em;
+}
+.App{
+    line-height: 1em;
+}
+.Edit{
+    margin: 0;
+    padding: 0;
+    
+}
+
+
+.dev{
+    display: flex;
+    justify-content: space-between;
+    margin-right: 2em;
+}
+.Freelance{
+    display: flex;
+    justify-content: space-between;
+    margin-right: 2em;
+}
+
+.education{
+    margin-left: 1em;
+    
+}
+
+.edu{
+    margin-right: 1em;
+    float: left;
+    font-size: 50px;
+    height: 10em;
+    width: 5.5em;
+}
+.Intermediate{
+    display: flex;
+    justify-content: space-between;
+    margin-right: 2em;
+}
+.Matric{
+    display: flex;
+    justify-content: space-between;
+    margin-right: 2em;
+}
+.Undergraduate{
+    display: flex;
+    justify-content: space-between;
+    margin-right: 2em;
+}
+.primary{
+    display: flex;
+    justify-content: space-between;
+    margin-right: 2em;
+}
+.Secondary{
+    display: flex;
+    justify-content: space-between;
+    margin-right: 2em;
+}
+
+
+
