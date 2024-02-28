@@ -1,0 +1,56 @@
+@font-face{
+    font-family: Belfast;
+    src: url(Belfast-Serial-Regular.ttf);
+}
+body{
+    font-family: Belfast;
+}
+.top {
+    text-align: center;
+    margin-top: 3em;
+    line-height: 10px;
+}
+.abdullah{
+    letter-spacing: 4px;
+}
+.links{
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.objective, .education, .skills, .projects, .extras{
+    margin: 3em;
+    display: flexbox;
+}
+
+.head{
+    display: flexbox;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.edumain{
+    line-height: 1px;
+}
+
+.list{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+
+@media screen and (max-width: 651px) {
+    .list{
+        display: flex;
+        flex-direction: column;
+    }
+
+    body{
+        font-size: small;
+    }
+    
+}
+
