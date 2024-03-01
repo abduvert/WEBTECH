@@ -17,6 +17,16 @@ body{
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    
+}
+
+a{
+    color: cornflowerblue;
+}
+
+a:hover{
+    font-size: large;
+    font-weight: bold;
 }
 
 .objective, .education, .skills, .projects, .extras{
@@ -25,7 +35,7 @@ body{
 }
 
 .head{
-    display: flexbox;
+    display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
@@ -54,3 +64,10 @@ body{
     
 }
 
+@media screen and (max-width: 358px) {
+    .abdullah, .head{
+        white-space: normal;
+        line-height: 1.5; 
+        margin-bottom: 5px;
+    }
+}
