@@ -1,73 +1,115 @@
-@font-face{
+@font-face {
     font-family: Belfast;
     src: url(Belfast-Serial-Regular.ttf);
 }
-body{
+
+body {
     font-family: Belfast;
 }
+
+.photo {
+    border-radius: 300px;
+    width: 200px;
+    height: auto;
+}
+
+.Welcome {
+    color: white;
+    font-weight: medium;
+}
+
+#profileCard {
+    display: none;
+    position: absolute;
+    line-height: 1em;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: black;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.abdullah:hover ~ #profileCard ,
+#profileCard:hover {
+    display: block;
+}
+
+.abdullah:hover ~ body{
+    filter: blur(5px); /* Adjust the blur radius as needed */
+    opacity: 0.5; /* Adjust the opacity as needed */
+    transition: filter 0.3s, opacity 0.3s; /* Smooth transition effect */
+}
+
+
+
 .top {
     text-align: center;
     margin-top: 3em;
     line-height: 10px;
 }
-.abdullah{
+
+.abdullah {
     letter-spacing: 4px;
 }
-.links{
+
+.links {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    
 }
 
-a{
+a {
     color: cornflowerblue;
 }
 
-a:hover{
+a:hover {
     font-size: large;
     font-weight: bold;
 }
 
-.objective, .education, .skills, .projects, .extras{
+.objective,
+.education,
+.skills,
+.projects,
+.extras {
     margin: 3em;
-    display: flexbox;
 }
 
-.head{
+.head {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
 }
-.edumain{
+
+.edumain {
     line-height: 1px;
 }
 
-.list{
+.list {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 
-
-
 @media screen and (max-width: 651px) {
-    .list{
+    .list {
         display: flex;
         flex-direction: column;
     }
 
-    body{
+    body {
         font-size: small;
     }
-    
 }
 
 @media screen and (max-width: 358px) {
-    .abdullah, .head{
+    .abdullah,
+    .head {
         white-space: normal;
-        line-height: 1.5; 
+        line-height: 1.5;
         margin-bottom: 5px;
     }
 }
