@@ -1,0 +1,172 @@
+body{
+    background-color: #1E1E24;
+    color: white;
+    font-family: 'Poppins';
+}
+
+.all{
+    position: relative;    
+}
+
+.overlay-input {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000; /* Ensure the input is above the images */
+}
+
+.search{
+    border-radius: 50px;
+    border-color: rgb(78, 0, 156);
+    background-color: rgb(78, 0, 156);
+    
+}
+
+.search:hover{
+    border-color: rgb(117, 70, 160);
+    background-color: rgb(117, 70, 160);
+}
+
+.overlay-input input {
+    width: 400px; /* Set the width as needed */
+    padding: 10px;
+    font-size: 16px;
+}
+
+.carousel {
+    position: relative;
+}
+
+.carousel-inner {
+    position: relative;
+}
+
+.nav{
+    background-color: #1E1E24;
+    padding-top: 1em;
+
+}
+
+.topList{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    align-items: center;
+    font-weight: 200;
+}
+
+.items{
+    margin-left: 3em;
+    color: rgb(255, 255, 255);
+}
+
+.items:hover{
+    color: rgb(78, 0, 156);
+    text-decoration: none;
+    font-weight: bold;
+
+}
+
+.img{
+    max-width: 100px; /* Set the maximum width you desire */
+    max-height: 100px; /* Set the maximum height you desire */
+    width: auto;
+    height: auto;
+}
+
+.login {
+    margin-left: auto; /* Use auto margin to push the login button to the right */
+    background-color: rgb(48, 48, 48);
+    border-color: rgb(48, 48, 48);
+    color: white;
+    border-radius: 18px;
+}
+
+.login:hover{
+    background-color: rgb(78, 0, 156);
+    border-color: rgb(78, 0, 156);
+    color: white;
+}
+
+.logcont{
+    margin-top: 1px;
+}
+
+.image{
+    display: block;
+}
+
+.slider{
+    border-radius: 20px;
+}
+
+.row{
+    width: 50%;
+    padding: 2em 2em 2em 3em;
+}
+
+.centerRow{
+    align-items: center;
+    justify-content: center;
+}
+
+.Home{
+    font-weight: bolder;
+    font-size: 8em;
+}
+
+
+
+.centerText,.text1, .text2 {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 120px;
+    font-weight: bolder;
+    line-height: 1em;
+    z-index: 1000;
+    opacity: 0;
+    color: white;
+    background: linear-gradient(to right, white 50%, transparent 50%);
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+
+.centerText {
+    animation: fadeInOut 4s ease-in-out 0s forwards;
+}
+
+.text1 {
+    animation: fadeInOut 4s ease-in-out 4s forwards;
+}
+
+.text2 {
+    animation: fadeInOut 4s ease-in-out 8s forwards;
+}
+
+
+@keyframes fadeInOut {
+    0%, 20% {
+        opacity: 0;
+    }
+    25%, 75% {
+        opacity: 1;
+    }
+    80%, 100% {
+        opacity: 0;
+    }
+}
+
+
+/* .slide2{
+    filter: blur(2px);
+    object-fit: cover; 
+    object-position: center top;
+}
+
+.carousel-inner{
+    height: 680px;
+    overflow: hidden;
+}*/
