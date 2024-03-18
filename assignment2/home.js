@@ -2,6 +2,7 @@ $(document).ready(function(){
     animateText();
     animateCards();
     scrolldown();
+    contact();
 });
 
 function animateText() {
@@ -38,4 +39,11 @@ function scrolldown(){
         });
     });
 
+}
+
+function contact(){
+    const button = $("#cont");
+    button.on("click",function(e){
+        window.location.href = "contact.html";
+    });
 }
