@@ -10,11 +10,8 @@
     <!-- Latest compiled and minified Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
 
-    <!-- Your custom styles.css -->
-    <link rel="stylesheet" href="styles.css">
-
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- icons -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
     <link rel="icon" href="assets/white1.png" type="image/x-icon">
 
@@ -24,22 +21,7 @@
 <body>
     <div class="all">
         <div class="container-fluid nav">
-            <ul class="navbar topList">
-                <li class="image">
-                    <img class="logo" src="assets/whiteAll.png" alt="">
-                </li>
-                <li class="nav-item"><a href="#home" class="nav-link items">Home</a></li>
-                <li class="nav-item"><a href="#discover" class="nav-link items">Stores</a></li>
-                <li class="nav-item"><a href="#register" class="nav-link items">Register</a></li>
-                <li class="nav-item"><a href="#contact" class="nav-link items">Contact</a></li>
-                <li class="nav-item"><a href="crud.html" class="nav-link items">CRUD</a></li>
-            </ul>
-            <div class="logcont ml-auto">
-                <button class="login">
-                    <span class="logintext">Login</span>
-                </button>
-            </div>
-        </div>
+        <%-include("./partials/navbar") %>
         
         <div class="slider container-fluid">
             <div id="demo" class="carousel slide" data-ride="carousel">
