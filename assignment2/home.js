@@ -6,6 +6,7 @@ $(document).ready(function(){
 });
 
 function animateText() {
+    console.log("text animation");
     var texts = document.getElementsByClassName("centerText");
     let currentIndex = 0;
 
