@@ -18,12 +18,6 @@ server.get("/partials/navbar", function(req, res) {
   res.render("partials/navbar");
 });
 
-server.get("/home.js", function(req, res) {
-  res.setHeader("Content-Type", "application/javascript"); // Set correct MIME type
-  res.sendFile(path.join(__dirname, "public", "home.js"));
-});
-
-
 // Start the server on port 3000
 server.listen(3000, () => {
   console.log("Server is running on port 3000");
