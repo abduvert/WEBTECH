@@ -3,6 +3,7 @@ $(document).ready(function(){
     animateCards();
     scrolldown();
     contact();
+    // special();
 });
 
 function animateText() {
@@ -48,3 +49,18 @@ function contact(){
         window.location.href = "contact.html";
     });
 }
+
+// function special(){
+//     var isCollapsed = $('.navbar-collapse').hasClass('show');
+            
+//     // Get the logcont div
+//     var logcontDiv = $('#logcont');
+
+//     if (isCollapsed) {
+//         // Add a class to logcont div when navbar collapses
+//         logcontDiv.addClass('logcont-collapsed');
+//     } else {
+//         // Remove the added class when navbar expands
+//         logcontDiv.removeClass('logcont-collapsed');
+//     }
+// }

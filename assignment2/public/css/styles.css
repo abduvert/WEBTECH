@@ -1,24 +1,30 @@
-body{
+body {
     background-color: #1E1E24;
     color: white;
     font-family: 'Poppins';
-    overflow-x: hidden;
+    overflow-x: hidden; /* Prevent scrolling to the right */
 }
 
-html{    
+html {
     scrollbar-width: normal;
-    scrollbar-color: #1E1E24 transparent;
+    scrollbar-color: #343438 transparent;
+    overflow-x: hidden; /* Prevent scrolling to the right */
 }
 
-html::-webkit-scrollbar{
+html::-webkit-scrollbar {
     width: 4vw;
 }
-html::-webkit-scrollbar-thumb{
-    background-color: #1E1E24;
+
+html::-webkit-scrollbar-thumb {
+    background-color: #3d3d3d;
 }
-html::-webkit-scrollbar{
-    background-color: #464646;
+
+html::-webkit-scrollbar {
+    background-color: #919191;
 }
+
+/* Add your other styles below */
+
 
 .all{
     position: relative;    
@@ -94,21 +100,14 @@ html::-webkit-scrollbar{
     transform: rotateY(30deg);
 }
 
-
-.nav{
-    position: fixed;
-    top: 0;
-    z-index: 1000;
+.mynav{
+    z-index: 10000;
     background-color: #1E1E24;
     padding-top: 1em;
 }
 
-.topList{
-    display: flex;
-    flex-direction: row;
-    list-style: none;
-    align-items: center;
-    font-weight: 200;
+.nav-link{
+    color: white;
 }
 
 .items{
@@ -126,6 +125,7 @@ html::-webkit-scrollbar{
 .logcont{
     left:50%
 }
+
 
 .logo{
     max-width: 100px; 
@@ -185,7 +185,7 @@ button:active {
 }
 
 .slider{
-    padding-top: 8em;
+    padding-top: 4em;
     border-radius: 20px;
 }
 
@@ -266,7 +266,7 @@ button:active {
     justify-content: center;
     margin-left: 2em;
     margin-bottom: 2em;
-    height: 500px;
+    min-height: 500px;
 }
 
 .card 
@@ -277,6 +277,7 @@ button:active {
     margin-top: 2em; 
     margin-bottom: 2em; 
     margin-right: 4em;
+    overflow-y: hidden;
     border-radius: 30px;
     background: #1E1E24;
     border-color: rgb(94, 93, 93);
@@ -373,7 +374,7 @@ button:active {
 
 .register{
     margin-top: 5em;
-    height: 500px;
+    min-height: 500px;
 }
 
 .registerLeft{
@@ -487,9 +488,10 @@ button:active {
 
 
 .numbers{
-    height: 20em;
+    min-height: 30em;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-between;
 }
 
@@ -521,14 +523,14 @@ button:active {
     text-align: left;
     padding: 2em;
     padding-top: 5em;
-    height:50em; 
+    min-height:50em; 
     background: linear-gradient(120deg,#d6d6d6, #5B42F3 50%,#00DDEB);
 }
 
 
 .contdiv2{
     justify-content: space-between;
-    width: 50%;
+    min-width: 50%;
     display: flex;
     flex-direction: row;
 }
@@ -622,3 +624,229 @@ button:active {
     padding-top: 7em;
 }
 
+
+
+@media screen and (max-width: 1000px) and (min-width: 523px) {
+
+    .cardrow{
+        flex-wrap: wrap;
+    }
+    .card{
+        width: 300px;
+        height: 300px;
+        
+    }
+    .inlineImg{
+        height: 180px;
+    }
+
+    .register{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .registerhead, .registertext{
+        text-align: center;
+        width: 100%;
+        padding-bottom: 1em;
+
+    }
+
+    .numbers{
+        padding-top: 2em;
+    }
+
+    .contdiv2{
+        flex-wrap: wrap;
+    }
+    .right{
+        padding-left: 1em;
+    }
+
+    /* .stores .head{
+        font-size: x-large;
+          
+    } */
+
+}
+
+@media screen and (max-width: 522px) and (min-width:200px) {
+    body{
+        overflow-x: hidden;
+    }
+    .cardrow{
+        flex-wrap: wrap;
+    }
+    .card{
+        width: 300px;
+        height: 300px;
+        
+    }
+    .inlineImg{
+        height: 170px;
+    }
+
+    .register{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .registerLeft{
+        width: 100%;
+    }
+    .registerhead, .registertext{
+        text-align: center;
+        width: 100%;
+        font-size: 45px;
+        padding-bottom: 1em;
+        word-wrap: initial;
+
+    }
+    .registertext{
+        width: fit-content;
+        font-size: 15px;
+    }
+
+    .numbers{
+        padding: 2em;
+    }
+
+    .contdiv2{
+        flex-wrap: wrap;
+    }
+    .right{
+        padding-top: 1em;
+    }
+
+    .stores{
+        height: 400px;
+    }
+
+    .stores .head{
+        padding: 1em;
+        font-size: 30px;
+          
+    }
+    .search{
+        width: 250px;
+    }
+    .card1{
+        width: 120px;
+        height: 80px;
+    }
+
+    .bg {
+        width: 300px;
+        height: 220px;
+      }
+      
+      .blob {
+        width: 240px;
+        height: 140px;
+      }
+
+      .cardreg{
+        width: 300px;
+        height: 220px;
+      }
+
+      .SignUp{
+        font-size: 30px;
+      }
+      .signpara{
+        font-size: 15px;
+        width: 90%;
+      }
+      
+    .nm{
+        font-size: 40px;
+    }
+    .text{
+        font-size: 20px;
+    }
+}
+
+
+@media screen and (max-width: 1250px) and (min-width:1000px){
+    .slide1,.slide2 {
+        top: 50%;
+        width: 500px;
+        height: 120%;
+    }
+    
+    .slide2{
+        width: 600px;
+    }
+
+    .centerText {
+        width: 55%;
+        font-size: 100px;
+    }
+
+}
+
+@media screen and (max-width:1000px) and (min-width:860px){
+
+    .carousel-inner{
+        height: 600px;
+    }
+
+    .slide1,.slide2 {
+        width: 380px;
+        height: 130%;
+    }
+    
+    .slide2{
+        width: 520px;
+    }
+
+    .centerText {
+        width: 55%;
+        font-size: 80px;
+    }
+
+}
+@media screen and (max-width:860px) and (min-width:700px){
+
+    .carousel-inner{
+        height: 400px;
+    }
+
+    .slide1,.slide2 {
+        width: 320px;
+        height: 130%;
+    }
+    
+    .slide2{
+        width: 380px;
+    }
+
+    .centerText {
+        width: 55%;
+        font-size: 40px;
+    }
+
+}
+@media screen and (max-width:700px) and (min-width:200px){
+
+    .carousel-inner{
+        height: 300px;
+    }
+
+    .slide1,.slide2 {
+        width: 170px;
+        height: 120%;
+    }
+    
+    .slide2{
+        width: 280px;
+    }
+
+    .centerText {
+        width: 55%;
+        font-size: 32px;
+    }
+
+}

@@ -18,6 +18,11 @@ server.get("/partials/navbar", function(req, res) {
   res.render("partials/navbar");
 });
 
+
+server.get("/crud", function(req, res) {
+  res.render("crud");
+});
+
 // Start the server on port 3000
 server.listen(3000, () => {
   console.log("Server is running on port 3000");
