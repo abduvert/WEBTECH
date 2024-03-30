@@ -1,0 +1,68 @@
+
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    background-color: #1E1E24; 
+
+}
+
+.main {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+}
+
+
+
+.clear:hover{
+    background-color: white;
+    border-color: white;
+    color: black;
+}
+
+
+.container {
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(244, 244, 244, 0.1);
+}
+
+.formlist {
+    list-style: none;
+    padding: 0;
+}
+
+.field {
+    margin-bottom: 15px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ced4da; /* Set your desired border color */
+    border-radius: 4px;
+}
+
+.create,.edit,.clear {
+    background-color: #1E1E24;
+    border-color: white;
+    margin-right: 10px;
+}
+
+.create:hover, .edit:hover{
+    background-color: green;
+    border-color: green;
+}
+
+.delete:hover{
+    background-color: red;
+    border-color: red;
+}
+
+.stories{
+    padding: 20px;
+}
