@@ -1,0 +1,104 @@
+body {
+    background-color: #1E1E24;
+    color: white;
+    font-family: 'Poppins';
+    overflow-x: hidden; /* Prevent scrolling to the right */
+}
+
+.mynav{
+    background-color: #1E1E24;
+    color: white;
+    padding: 1em;
+}
+
+.container{
+    justify-content: left;
+}
+
+.login {
+    align-items: center;
+    border: 0;
+    border-radius: 8px;
+    background: linear-gradient(120deg, #1E1E24, #5B42F3 50%, #00DDEB);
+    box-shadow: rgba(30, 30, 36, 0.2) 0 15px 30px -5px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    display: flex;
+    font-size: 16px;
+    justify-content: center;
+    line-height: 0.6em;
+    max-width: 100px;
+    height: 40px; /* Adjusted height */
+    padding: 3px;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+.login:active,
+.login:hover {
+    outline: 0;
+}
+
+.login span {
+    background-color: #1E1E24;
+    padding: 12px 12px;
+    border-radius: 6px;
+    width: 100%;
+    height: 100%;
+    transition: 200ms;
+}
+
+.login:hover span {
+    background: none;
+}
+
+.login:active {
+    transform: scale(0.9);
+}
+
+
+.storesList {
+    margin: 3em;
+    
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Adjust column width as needed */
+    grid-gap: 40px; /* Adjust gap between grid items */
+}
+
+
+.store{
+    width: 17em;
+    height: 25em;
+    padding: 1em;
+    border: 1px solid white;
+    border-radius: 15px;
+}
+
+.storeImg{
+    height: 10em;
+    border-radius: 10px;
+}
+
+.storeName,.storeDescription{
+    padding-top: 0.5em;
+}
+
+.btn-search {
+    background-color: white;
+    color: black;
+    width: 15em;
+}
+
+
+.btn-search:hover{
+    border: 0;
+    border-radius: 8px;
+    background: linear-gradient(120deg, #1E1E24, #5B42F3 50%, #00DDEB);
+    box-shadow: rgba(30, 30, 36, 0.2) 0 15px 30px -5px;
+    box-sizing: border-box;
+}

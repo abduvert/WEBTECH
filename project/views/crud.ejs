@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap">
+
+    <!-- Latest compiled and minified Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+
+    <!-- Your custom styles.css -->
+    <link rel="stylesheet" href="/css/crud.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD</title>
+</head>
+<body>
+    <div class="main">
+    <div class="container">
+        <form class="form">
+            <ul class="formlist">
+                <h1 class="CrudApp">CRUD App</h1>
+                <li class="field">
+                    <label for="usr" class="titleName">Title</label>
+                <input type="text" placeholder="Title" class="title form-control">
+                </li>
+                <li class="field">
+                    <label for="usr" class="titleName">Descirption</label>
+                    <textarea class="description form-control" rows="2" placeholder="Descirption"></textarea>
+                </li>
+                <li class="field">
+                <button class="create btn btn-primary" type="submit">Submit</button>
+                <button class="clear btn btn-primary" type="submit" style="display: none;">Clear</button>
+                </li>
+            </ul>
+        </form>
+        
+    </div>
+
+    <div class="cr"></div>
+    <div class="stories"></div>
+
+    
+</div>
+
+
+
+
+<!-- jQuery, Popper.js, and Bootstrap JS -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>   
+
+<!-- Your custom script -->
+<script src="/js/crud.js"></script>
+
+</body>
+</html>
