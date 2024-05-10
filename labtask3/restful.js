@@ -1,6 +1,8 @@
 const express = require("express");
+const cors = require("cors"); // Import the CORS middleware
 const app = express();
 app.use(express.json());
+app.use(cors());
 
 const products = require("./products"); // Importing products array
 

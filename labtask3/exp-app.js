@@ -14,6 +14,11 @@ server.get("/partials/navbar", function(req, res) {
 });
 
 
+server.get("/partials/store", function(req, res) {
+  res.render("partials/storeNav");
+});
+
+
 server.get("/crud", function(req, res) {
   res.render("crud");
 });
@@ -21,6 +26,16 @@ server.get("/crud", function(req, res) {
 
 server.get("/contact", function(req, res) {
   res.render("contact");
+});
+
+
+server.get("/stores", function(req, res) {
+  res.render("storeslist");
+});
+
+
+server.get("/store", function(req, res) {
+  res.render("storeHome");
 });
 
 

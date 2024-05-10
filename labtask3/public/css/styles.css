@@ -46,11 +46,8 @@ html::-webkit-scrollbar {
       
 }
 
-.search:focus{
-    border: #FFFFFF;
-    border-color: white;
-    box-shadow: 0 0 5px rgba(91, 66, 243, 0.5); /* Add a box shadow when input is focused */
-    outline: none;
+.search:hover{
+    
 }
 
 .overlay-input input {
@@ -101,7 +98,7 @@ html::-webkit-scrollbar {
 }
 
 .mynav{
-    z-index: 10000;
+    z-index: 100;
     background-color: #1E1E24;
     padding-top: 1em;
 }
@@ -241,6 +238,7 @@ button:active {
 .home{
     display: flex;
     flex-direction: column;
+    color: white;
 }
 
 .cardleft{
@@ -350,6 +348,7 @@ button:active {
 }
 
 .head{
+    color: white;
     font-weight: bolder;
     font-size: 50px;
     padding-top: 2em;
@@ -515,8 +514,13 @@ button:active {
     font-size: 60px;
 }
 
+.contact{
+    color: #1E1E24;
+}
+
 .contactdiv{
     display: flex;
+    color: #1E1E24;
     flex-direction: column;
     align-items: flex-start;
     align-self: stretch;
@@ -529,6 +533,7 @@ button:active {
 
 
 .contdiv2{
+    color: #1E1E24;
     justify-content: space-between;
     min-width: 50%;
     display: flex;
@@ -536,6 +541,11 @@ button:active {
 }
 .location{
     padding-bottom: 3em;
+}
+
+.search:hover{
+    background-color: #1E1E24;
+    color: white;
 }
 
 .contact,.loc{
@@ -647,6 +657,7 @@ button:active {
         align-items: center;
     }
     .registerhead, .registertext{
+        color: white;
         text-align: center;
         width: 100%;
         padding-bottom: 1em;

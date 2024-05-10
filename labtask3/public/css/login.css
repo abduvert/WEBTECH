@@ -48,10 +48,7 @@ textarea{
 }
 
 
-.contact{
-    color: white;
-    font-weight: bold;
-}
+
 .error{
     outline:2px solid red;
 }
