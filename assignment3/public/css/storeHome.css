@@ -1,0 +1,148 @@
+body {
+    background-color: #1E1E24;
+    color: white;
+    font-family: 'Poppins';
+    overflow-x: hidden; /* Prevent scrolling to the right */
+}
+
+.storeInfo {
+    margin: 1em;
+}
+
+.logoImg {
+    display: flex;
+    float: left;
+    margin: 1em;
+    width: 10%;
+}
+
+.textInfo {
+    display: flex;
+    flex-direction: column;
+    height: min-content;
+    width: 50%;
+}
+
+.cardS {
+    width: 20em;
+    padding: 20px;
+    height: 27em;
+    background-color: #1E1E24;
+    color: white;
+    border: 1px solid #ffffff;
+    position: relative;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Align the content horizontally */
+}
+
+.color-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%; /* Make sure the color info takes full width */
+    height: 2em;
+    padding-bottom: 10px; /* Add some space below color info */
+}
+
+.svg-icon {
+    display: flex;
+    flex-direction: row;
+    float: left;
+    margin: 1em;
+    width: 10%;
+    background-color: white;
+}
+
+.card-foot {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+    border-top: 1px solid #ddd;
+}
+
+.card-button {
+    border: 1px solid #ffffff;
+    display: flex;
+    padding: .3em;
+    width: 2em;
+    height: 2em;
+    cursor: pointer;
+    border-radius: 50px;
+    transition: .3s ease-in-out;
+}
+
+.card-img {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: auto;
+    border-radius: .5rem;
+    transition: .3s ease;
+}
+
+.card-info {
+    padding-top: 10px;
+    padding-bottom: 10px; /* Add some space below the card info */
+    max-height: 12em; /* Adjust the maximum height of the card info */
+    overflow: hidden; /* Hide overflowing content */
+}
+
+.text {
+    color: white;
+    font-size: .9em;
+    padding-bottom: 10px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    position: relative;
+}
+
+.text::after {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding-left: 4px; 
+    background-color: #1E1E24; 
+}
+
+.text-title {
+    font-weight: 900;
+    font-size: 1.2em;
+    line-height: 1.5;
+}
+
+.text-price {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.color-circle {
+    width: 20px;
+    height: 20px;
+    background-color: #ff0000;
+    border-radius: 50%;
+    margin-top: 5px;
+}
+
+.card-button:hover {
+    border: 1px solid #717171;
+    background-color: #383838;
+}
+
+.card-img:hover {
+    transform: translateY(-25%);
+    z-index: 2;
+    box-shadow: #575757 0px 13px 47px -5px, #575757 0px 8px 16px -8px;
+}
+
+.items {
+    margin: 2em;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-gap: 40px;
+}
