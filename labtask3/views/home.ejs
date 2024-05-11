@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Link to Poppins font from Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap">
+
+    <!-- Latest compiled and minified Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <link rel="icon" href="assets/white1.png" type="image/x-icon">
+    <link rel="stylesheet" href="/css/styles.css"> 
+    <link rel="stylesheet" href="/css/login.css"> 
+    
+    <title>Cart Quest</title>
+</head>
+<body>
+    <div class="all">
+        <%-include("./partials/navbar") %>
+        
+        <div class="slider container-fluid">
+            <div id="demo" class="carousel slide" data-ride="carousel">
+                
+                <ul class="carousel-indicators">
+                    <li data-target="#demo" data-slide-to="0" class="active"></li>
+                    <li data-target="#demo" data-slide-to="1"></li>
+                    <li data-target="#demo" data-slide-to="2"></li>
+                </ul>
+
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img class="background" src="/assets/bg.png" alt="Los Angeles">
+                        <img class="slide1" src="/assets/Rectangle 38.png" alt="Los Angeles">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="background" src="/assets/bg.png" alt="Los Angeles">
+                        <img class="slide1 slide2" src="/assets/clthes.png" alt="Los Angeles">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="background" src="/assets/bg.png" alt="Los Angeles">
+                        <img class="slide1 slide3" src="/assets/head.png" alt="Los Angeles">
+                    </div>
+                </div>
+                
+                <!-- Left and right controls -->
+                <!-- <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </a>
+                <a class="carousel-control-next" href="#demo" data-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </a> -->
+                <div class="center">
+                    <p class="centerText activeT">We have got your style covered</p>
+                    <p class="centerText">Explore, <br> Endless Possibilities</p>
+                    <p class="centerText">Save your store</p>
+                    <p class="centerText cart">Cart Quest</p>
+                </div>
+            </div>
+            
+        </div>
+
+<div class="home" id="home">
+    <div class="cardleft">
+        <h3 class="choosehead">
+            Choose what you want!
+        </h2>
+        <p class="options">
+            Exciting stores for both men and women. 
+            See what you need and save the store for later
+            All sorts of products from head to toe, for you and
+            for your daily life use
+            Exciting stores for both men and women. 
+            See what you need and save the store for later
+            All sorts of products from head to toe, for you and
+            for your daily life use
+        </p>
+    </div>
+
+    <div class="cardrow">
+        <div class="card">
+            <h1 class="intext">
+                Clothing & Apparel
+            </h1>
+            <img class="inlineImg" src="assets/clothing.jpg" alt="">
+        </div>
+        <div class="card">    
+            <h1 class="intext">Electronics & Gadgets</h1>
+            <img class="inlineImg" src="assets/ipod.jpg" alt="">
+        </div>
+        <div class="card">    
+            <h1 class="intext">Home & Kitchen Appliances</h1>
+            <img class="inlineImg" src="assets/home.jpg" alt="">
+        </div>
+        <div class="card">    
+            <h1 class="intext">Health & Beauty products</h1>
+            <img class="inlineImg" src="assets/face.jpg" alt="">
+        </div>
+    </div>
+</div>
+
+<div class="discover" id="discover">
+    <div class="stores">
+        <h1 class="head">
+            Discover the best in every store.
+        </h1>
+        <div class="searchbar">
+            <button id="goToStores" type="button" class="search">Go to Stores</button>
+        </div>
+        
+        <div class="storeslist">
+            <ul class="list" id="cardList">
+                <li class="card1">
+                    <img src="assets/stores/almas.png" alt="" class="logos">
+                </li>
+                
+                <li class="card1">
+                    <img src="assets/stores/audionic.jpg" alt="" class="logos">
+                </li>
+                
+                <li class="card1">
+                    <img src="assets/stores/apollo.webp" alt="" class="logos">
+                </li>
+                
+                <li class="card1">
+                    <img src="assets/stores/bata.png" alt="" class="logos">
+                </li>
+                
+                <li class="card1">
+                    <img src="assets/stores/engine.webp" alt="" class="logos">
+                </li>
+                
+                <li class="card1">
+                    <img src="assets/stores/imtiaz.png" alt="" class="logos">
+                </li>
+                
+                <li class="card1">
+                    <img src="assets/stores/cosrx.jpg" alt="" class="logos">
+                </li>
+                
+                <li class="card1">
+                    <img src="assets/stores/dawlancw.png" alt="" class="logos">
+                </li>
+                
+                <li class="card1">
+                    <img src="assets/stores/j.png" alt="" class="logos">
+                </li>
+                
+                <li class="card1">
+                    <img src="assets/stores/mi.webp" alt="" class="logos">
+                </li>
+                
+                <li class="card1">
+                    <img src="assets/stores/orient.jpg" alt="" class="logos">
+                </li>
+                
+                <li class="card1">
+                    <img src="assets/stores/pixi.png" alt="" class="logos">
+                </li>
+                <li class="card1">
+                    <img src="assets/stores/vince.jpg" alt="" class="logos">
+                </li>
+                
+                <li class="card1">
+                    <img src="assets/stores/huda.png" alt="" class="logos">
+                </li>
+                
+                <li class="card1">
+                    <img src="assets/stores/tcl.png" alt="" class="logos">
+                </li>
+                
+                <li class="card1">
+                    <img src="assets/stores/orient.jpg" alt="" class="logos">
+                </li>
+                
+                <li class="card1">
+                    <img src="assets/stores/engine.webp" alt="" class="logos">
+                </li>
+                
+                <li class="card1">
+                    <img src="assets/stores/imtiaz.png" alt="" class="logos">
+                </li>
+                
+                <li class="card1">
+                    <img src="assets/stores/almas.png" alt="" class="logos">
+                </li>
+                
+                <li class="card1">
+                    <img src="assets/stores/audionic.jpg" alt="" class="logos">
+                </li>
+                
+                <li class="card1">
+                    <img src="assets/stores/apollo.webp" alt="" class="logos">
+                </li>
+                
+                <li class="card1">
+                    <img src="assets/stores/bata.png" alt="" class="logos">
+                </li>
+                
+                <li class="card1">
+                    <img src="assets/stores/pixi.png" alt="" class="logos">
+                </li>
+                <li class="card1">
+                    <img src="assets/stores/vince.jpg" alt="" class="logos">
+                </li>
+                
+                <li class="card1">
+                    <img src="assets/stores/huda.png" alt="" class="logos">
+                </li>
+                
+                <li class="card1">
+                    <img src="assets/stores/tcl.png" alt="" class="logos">
+                </li>
+                
+                <li class="card1">
+                    <img src="/assets/stores/orient.jpg" alt="" class="logos">
+                </li>
+                
+                <li class="card1">
+                    <img src="assets/stores/engine.webp" alt="" class="logos">
+                </li>
+                
+                <li class="card1">
+                    <img src="assets/stores/imtiaz.png" alt="" class="logos">
+                </li>
+                
+                <li class="card1">
+                    <img src="assets/stores/almas.png" alt="" class="logos">
+                </li>
+                
+                <li class="card1">
+                    <img src="assets/stores/audionic.jpg" alt="" class="logos">
+                </li>
+                
+                <li class="card1">
+                    <img src="/assets/stores/apollo.webp" alt="" class="logos">
+                </li>
+                
+                <li class="card1">
+                    <img src="assets/stores/bata.png" alt="" class="logos">
+                </li>
+                
+                <li class="card1">
+                    <img src="assets/stores/engine.webp" alt="" class="logos">
+                </li>
+                
+                <li class="card1">
+                    <img src="assets/stores/imtiaz.png" alt="" class="logos">
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+    </div>
+
+    <div class="register" id="register">
+        <div class="registerLeft">
+            <h3 class="registerhead">
+                Register your Store Now!
+            </h2>
+            <p class="registertext">
+                Join our vibrant community today and unlock endless possibilities with just a simple registration
+                Join our vibrant community today and unlock endless possibilities with just a simple registration
+            </p>
+        </div>
+        <div class="cardreg">
+            <div class="bg">
+                <p class="SignUp intext">
+                    Sign Up Here!
+                </p>
+                <p class="signpara">
+                    Rank your store among the other competitors
+                </p>
+                <div class="logcont ml-auto">
+                    <button class="signup">
+                        <span class="signtext">Sign Up</span>
+                    </button>
+                </div>
+            </div>
+            <div class="blob"></div>
+          </div>
+          
+    </div>
+
+    <div class="numbers">
+        <div class="store">
+            <h1 class="storesnumber nm">250+</h1>
+            <h3 class="text">Registered Stores</h3>
+        </div>
+        <div class="companies">
+            <h1 class="compnumber nm">120+</h1>
+            <h3 class="text">Brands</h3>
+        </div>
+        <div class="product">
+            <h1 class="productnumber nm">2k+</h1>
+            <h3 class="text">Products</h3>
+        </div>
+        <div class="topRate">
+            <h1 class="ratenumber nm">100+</h1>
+            <h3 class="text">Top Rated Brands</h3>
+        </div>
+    </div>
+
+    <div class="contactdiv" id="contact">
+        <div class="location">
+            <h3 class="loc">Current Region/Language</h3>
+            <p class="pakistan">Pakistan/English</p>
+        </div> 
+        <div class="contdiv2">
+            <div class="bottom left">
+                <h1 class="contact">Contact</h1>
+                <p class="pakistan">Do you have any questions?</p>
+                <button class="cont" id="cont">Contact Us</button>
+            </div>
+            <div class="bottom right">
+                <h1 class="contact">Social Media</h1>
+                <p class="pakistan">Follow us to keep the track</p>
+                <button class="Social">
+                    <img class="soclog" src="assets/insta.png" alt="">
+                </button>
+                <button class="Social">
+                    <img class="soclog" src="assets/fb.png" alt="">
+                </button>
+                <button class="Social">
+                    <img class="soclog" src="assets/ln.png" alt="">
+                </button>
+                <button class="Social">
+                    <img class="soclog" src="assets/twitter.png" alt="">
+                </button>
+            </div>
+        </div>
+        <div class="highlight">
+            <h1 class="More contact">More</h1>
+            <div class="more1">
+                <a href="" class="more">About</a>
+                <a href="" class="more">Products</a>
+                <a href="" class="more">Location</a>
+                <a href="" class="more">Filter</a>
+            </div>
+            <div class="more2">
+                <a href="" class="more">Men</a>
+                <a href="" class="more">Women</a>
+                <a href="" class="more">Sustainability</a>
+            </div>
+            <a href="" class="more">Record</a>
+        </div>
+        <div class="bottomlogo">
+            <img class="logo" src="assets/blackAll.png" alt="">
+        </div>
+</div>
+
+<%-include("./partials/login") %>
+
+</div>
+
+    <!-- jQuery, Popper.js, and Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>   
+    <script src="/js/home.js"></script>   
+    <script src="/js/login.js"></script>   
+
+</body>
+</html>

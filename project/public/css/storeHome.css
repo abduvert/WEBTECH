@@ -1,0 +1,133 @@
+body {
+    background-color: #1E1E24;
+    color: white;
+    font-family: 'Poppins';
+    overflow-x: hidden; /* Prevent scrolling to the right */
+}
+
+.storeInfo{
+    margin: 1em;
+    display: inline-block;
+}
+
+
+.logoImg{
+    display: flex;
+    float: left;
+    margin: 1em;
+    width: 10%;
+
+    
+}
+
+.textInfo{
+    display: flex;
+    flex-direction: column;
+    margin: 1em;
+    width: 50%;
+}
+
+
+.card {
+    width: 300px; /* Adjust the width as needed */
+    padding: 20px; /* Add padding around the card */
+    background-color: #1E1E24;
+    color: white;
+    border: 1px solid #ffffff;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.card-img {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: auto;
+    border-radius: .5rem;
+    transition: .3s ease;
+}
+
+.card-info {
+    padding-top: 10%;
+}
+
+.text-title {
+    font-weight: 900;
+    font-size: 1.2em;
+    line-height: 1.5;
+}
+
+.text{
+    color: white;
+    font-size: .9em;
+    padding-bottom: 10px;
+    /* Limiting to 2 lines */
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    position: relative;
+}
+
+.text::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 20px; /* Adjust height as needed */
+    background: linear-gradient(transparent, #1E1E24); /* Adjust colors as needed */
+}
+
+
+.text-price {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.color-circle {
+    width: 20px;
+    height: 20px;
+    background-color: #ff0000;
+    border-radius: 50%;
+    margin-top: 5px;
+}
+
+.card-footer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+    border-top: 1px solid #ddd;
+}
+
+.card-button {
+    border: 1px solid #252525;
+    display: flex;
+    padding: .3em;
+    cursor: pointer;
+    border-radius: 50px;
+    transition: .3s ease-in-out;
+}
+
+.card-button:hover {
+    border: 1px solid #717171;
+    background-color: #0e0e4f;
+}
+
+.card-img:hover {
+    transform: translateY(-25%);
+    z-index: 2;
+    box-shadow: #575757 0px 13px 47px -5px, #575757 0px 8px 16px -8px;
+}
+
+
+.items{
+    margin: 2em;
+    
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Adjust column width as needed */
+    grid-gap: 40px; /* Adjust gap between grid items */
+}
