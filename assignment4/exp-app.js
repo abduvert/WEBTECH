@@ -1,11 +1,23 @@
 const express = require("express");
+const mongoose = require("mongoose");
 const server = express();
+const cors = require("cors");
 const path = require("path");
 let ejsLayouts = require("express-ejs-layouts");
+
+
+//routes
+const storesRoute = require("./routers/store")
+const productsRoute = require("./routers/product")
+server.use("/api/",storesRoute)
+server.use("/api/",productsRoute)
 
 server.use(express.static("public"));
 server.set("view engine", "ejs");
 server.use(ejsLayouts);
+server.use(cors());
+server.use(express.json());
+server.use(express.urlencoded({ extended: false }));
 
 
 server.get("/", function (req, res) {
@@ -47,6 +59,15 @@ server.get("/store", function(req, res) {
 });
 
 
-server.listen(3000, () => {
-  console.log("Server is running on port 3000");
-});
+mongoose
+  .connect("mongodb+srv://abduvert:asdf1234@practice.ppwrppr.mongodb.net/listofStores?retryWrites=true&w=majority")
+.then(() => {
+      server.listen(3000, () => {
+        console.log("Node API running");
+
+      });
+    console.log("Connected to the Database");
+  })
+  .catch((error) => {
+    console.error("Error connecting to the database:", error);
+  });
