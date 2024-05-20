@@ -1,0 +1,72 @@
+body{
+    background-color: #1E1E24;
+    color: white;
+    font-family: 'Poppins';
+    overflow-x: hidden;
+}
+
+.mainCont{
+    
+    height: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+}
+
+textarea{
+    max-height: 90px;
+    min-height: 40px;
+}
+
+.container {
+    float: right;
+    margin: 5em;
+    height: 500px;
+    width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(244, 244, 244, 0.1);
+}
+
+.formlist {
+    list-style: none;
+    padding: 4em;
+}
+
+.field {
+    margin-bottom: 0.4em;
+}
+
+.form-control {
+    width: 100%;
+    padding: 0.7em;
+    border: 1px solid #ced4da; /* Set your desired border color */
+    border-radius: 4px;
+}
+
+.left{
+    align-self: center;
+    width: 40%;
+}
+
+.logoCont{
+    width: 200px;
+    padding-bottom: 2em;
+}
+
+.logcontact{
+    width: 400px;
+}
+
+.contactC{
+    color: white;
+    font-weight: bold;
+}
+.error{
+    outline:2px solid red;
+}
+
+.thanks{
+    font-size: 30px;
+    justify-content: center;
+}

@@ -1,0 +1,46 @@
+<nav class="mynav navbar navbar-expand-lg">
+  <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+          <img class="logo" src="assets/whiteAll.png" alt="">
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                  <a class="nav-link" href="/">Home</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="/stores">Stores</a>
+              </li>
+
+              <% if (!user) { %>
+              <li class="nav-item">
+                  <a class="nav-link" href="/register">Register</a>
+              </li>
+              <% } %>
+              <li class="nav-item">
+                  <a class="nav-link" href="/contact">Contact</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="/crud">CRUD</a>
+              </li>
+          </ul>
+          
+          <% if (user) { %>
+            <form action="/user/logout" method="post">
+                <button class="btn btn-outline-light login" type="submit">
+                    <span class="logintext">Logout</span>
+                </button>
+            </form>
+          <% } else { %>
+            <div class="logcont">
+                <button class="btn btn-outline-light login">
+                    <span class="logintext">Login</span>
+                </button>
+            </div>
+            <% } %>
+      </div>
+  </div>
+</nav>

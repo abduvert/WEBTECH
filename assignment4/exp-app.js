@@ -60,7 +60,7 @@ server.get("/store", function(req, res) {
 
 
 mongoose
-  .connect("mongodb+srv://abduvert:asdf1234@practice.ppwrppr.mongodb.net/listofStores?retryWrites=true&w=majority")
+  .connect("mongodb+srv://abduvert:asdf1234@practice.ppwrppr.mongodb.net/retryWrites=true&w=majority")
 .then(() => {
       server.listen(3000, () => {
         console.log("Node API running");
