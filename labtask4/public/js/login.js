@@ -4,11 +4,11 @@ var loginButton = document.querySelector('.login');
 var signupButton = document.querySelector('.signup'); 
 
 loginButton.onclick = function() {
-    window.location.href = "/login"
+    window.location.href = "/login";
 }
 
 signupButton.onclick = function() {
-    window.location.href = "/register"
+    window.location.href = "/register";
 }
 
 window.onclick = function(event) {
@@ -17,16 +17,13 @@ window.onclick = function(event) {
     }
 }
 
-
 var closeButton = document.querySelector('.cross');
-var loginPopup = document.getElementById('loginPopup');
 closeButton.addEventListener('click', function() {
     loginPopup.style.display = 'none'; 
     window.history.back();
 });
 
-
-document.querySelector('.form').addEventListener('submit', function(e) {
+document.querySelector('.loginform').addEventListener('submit', async function(e) {
     e.preventDefault();
     
     const email = document.querySelector('#email').value.trim();
@@ -37,5 +34,58 @@ document.querySelector('.form').addEventListener('submit', function(e) {
         return;
     }
 
-    // Proceed with form submission (e.g., using fetch or AJAX)
+    try {
+        const response = await fetch("/user/login", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({ email, password })
+        });
+
+        if (response.ok) {
+            const data = await response.json();
+            console.log("rfgre rfrf hfgieri")
+            console.log(data.token);
+            localStorage.token  = data.token
+            alert("Login successful");
+            window.location.href = '/stores';
+        } else {
+            alert("Invalid email or password");
+        }
+    } catch (error) {
+        console.error('Error during login:', error);
+        alert("An error occurred during login");
+    }
 });
+
+// Utility function to add token to headers
+function getAuthHeaders() {
+    const token = localStorage.getItem('token');
+    return token ? { 'Authorization': `Bearer ${token}` } : {};
+}
+
+// Example usage of the getAuthHeaders function for an authenticated request
+async function fetchProtectedData() {
+    try {
+        const response = await fetch('/api/protected', {
+            method: 'GET',
+            headers: {
+                ...getAuthHeaders(),
+                'Content-Type': 'application/json',
+            },
+        });
+
+        if (response.ok) {
+            const data = await response.json();
+            console.log('Protected data:', data);
+        } else {
+            console.log('Failed to fetch protected data');
+        }
+    } catch (error) {
+        console.error('Error fetching protected data:', error);
+    }
+}
+
+// Call fetchProtectedData to demonstrate the usage of token in headers
+fetchProtectedData();

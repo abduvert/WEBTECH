@@ -5,10 +5,6 @@ const storeSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    favorite: {
-        type: Boolean,
-        default: false
-    },
     totalProducts: {
         type: Number,
         default: 0

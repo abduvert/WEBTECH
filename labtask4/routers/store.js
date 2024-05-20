@@ -1,9 +1,9 @@
 const express = require("express");
 const Store = require("../models/storeModel");
+const {verifyToken} = require("../middlewares/auth");
 
 const router = express.Router();
 
-// Middleware for using JSON and understanding it
 router.use(express.json());
 router.use(express.urlencoded({ extended: false }));
 
@@ -14,8 +14,8 @@ router.get("/stores", async (req, res) => {
     let skip = (page - 1) * pageSize;
     let total = await Store.countDocuments();
     let totalPages = Math.ceil(total / pageSize);
-    let stores = await Store.find().limit(pageSize).skip(skip);
-
+    let stores = await Store.find({owner:req.session.user._id}).limit(pageSize).skip(skip);
+    // const stores = await Store.find({owner: req.body.userid });
     res.status(200).json({
       stores,
       page,
@@ -26,8 +26,6 @@ router.get("/stores", async (req, res) => {
   }
 });
 
-
-// Fetching a store by id
 router.get("/store/:id", async (req, res) => {
   try {
     const store = await Store.findById(req.params.id);
@@ -40,10 +38,16 @@ router.get("/store/:id", async (req, res) => {
   }
 });
 
-// Creating a new store cluster/collection
-router.post("/store", async (req, res) => {
+router.post("/store",  async (req, res) => {
   try {
-    const store = new Store(req.body);
+    const userId = req.session.user._id
+    const store = new Store({
+      name: req.body.name,
+      totalProducts: req.body.totalProducts,
+      description: req.body.description,
+      websiteOrAppLink: req.body.link,
+      owner: userId 
+    });;
     await store.save();
     res.status(201).json(store);
   } catch (error) {
@@ -51,10 +55,26 @@ router.post("/store", async (req, res) => {
   }
 });
 
-// Updating the store variables using its id
 router.put("/store/:id", async (req, res) => {
   try {
-    const store = await Store.findByIdAndUpdate(req.params.id, req.body, { new: true, runValidators: true });
+    const store = await Store.findByIdAndUpdate(
+      { _id: req.params.id, owner: req.session.user._id },
+       req.body, 
+       { new: true, runValidators: true });
+
+
+    if (!store) {
+      return res.status(404).json({ message: `Cannot find store with id ${req.params.id}` });
+    }
+    res.status(200).json(store);
+  } catch (error) {
+    res.statu(500).json({ message: error.message });
+  }
+});
+
+router.delete("/store/:id",async (req, res) => {
+  try {
+    const store = await Store.findByIdAndDelete({ _id: req.params.id, owner: req.session.user._id });
     if (!store) {
       return res.status(404).json({ message: `Cannot find store with id ${req.params.id}` });
     }
@@ -64,10 +84,12 @@ router.put("/store/:id", async (req, res) => {
   }
 });
 
-// Deleting the store using its id
-router.delete("/store/:id", async (req, res) => {
+
+router.delete("/stores",async (req, res) => {
   try {
-    const store = await Store.findByIdAndDelete(req.params.id);
+    const store = await Store.deleteMany({owner: req.session.user._id });
+    // const store = await Store.deleteMany({owner: req.body.userid });
+
     if (!store) {
       return res.status(404).json({ message: `Cannot find store with id ${req.params.id}` });
     }

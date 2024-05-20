@@ -2,7 +2,7 @@ const express = require("express");
 const session = require("express-session");
 const mongoose = require("mongoose");
 const cookieparser = require("cookie-parser");
-const { restrictToLoggedInUser , auth} = require("./middlewares/auth");
+const { restrictToLoggedInUser , auth,verifyToken} = require("./middlewares/auth");
 const cors = require("cors");
 const ejsLayouts = require("express-ejs-layouts");
 
@@ -10,16 +10,17 @@ const server = express();
 
 // Middleware
 server.use(cors());
+server.use(session({
+    secret: "shopomania149",
+    resave: false,
+    saveUninitialized: false,
+    cookie: { secure: false }
+}));
+server.use(auth);
 server.use(express.json());
 server.use(cookieparser());
 server.use(express.urlencoded({ extended: false }));
 server.use(express.static("public"));
-server.use(session({
-    secret: "shopomania149",
-    resave: false,
-    saveUninitialized: false
-}));
-server.use(auth);
 server.use(ejsLayouts);
 server.set("view engine", "ejs");
 
@@ -28,7 +29,7 @@ const storesRoute = require("./routers/store");
 const productsRoute = require("./routers/product");
 const userRouter = require("./routers/user");
 
-server.use("/api/", restrictToLoggedInUser,storesRoute);
+server.use("/api/",storesRoute);
 server.use("/api/", productsRoute);
 server.use("/user/", userRouter);
 
@@ -70,6 +71,10 @@ server.get("/store", (req, res) => {
 
 server.get("/login", (req, res) => {
     res.render("partials/login");
+});
+
+server.get("/storeForm", (req, res) => {
+    res.render("addStoreForm");
 });
 
 

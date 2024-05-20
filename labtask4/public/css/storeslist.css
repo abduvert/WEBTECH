@@ -65,10 +65,12 @@ body {
 
 .store{
     width: 17em;
-    height: 23em;
+    height: 25em;
     padding: 1em;
     border: 1px solid white;
     border-radius: 15px;
+    justify-content: center;
+    align-items: center;
 }
 
 
@@ -88,11 +90,19 @@ body {
     padding-top: 0.5em;
 }
 
-.btn-search {
+.btn-search{
     background-color: white;
     color: black;
     width: 15em;
 }
+
+.delete-store,.edit-store{
+    background-color: white;
+    color: black;
+    margin-right: 0.3em;
+    width: 7em;
+}
+
 
 
 .btn-search:hover{
@@ -130,4 +140,67 @@ body {
 .pagination button:disabled {
     opacity: 0.5;
     cursor: not-allowed;
+}
+
+
+/* adding add store form istyle */
+
+/* styles.css */
+
+
+.form-cont {
+    display: flex;
+    justify-content: center;
+    background-color: #1E1E24;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.store-form div {
+    margin-bottom: 15px;
+}
+
+.store-form label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.store-form input,
+.store-form textarea {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.store-form button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.create-store {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.clear-store {
+    background-color: #f44336;
+    color: white;
+    margin-top: 10px;
+}
+
+.create-store:hover {
+    background-color: #45a049;
+}
+
+.clear-store:hover {
+    background-color: #e53935;
 }
