@@ -15,24 +15,17 @@
         <%- include('./partials/storeNav') %>
     </header>
 
-    <div class="storesList">
+    <div class="">
+    <div class="storesListt">
     <%- include('./partials/storeCard') %>
-    <%- include('./partials/storeCard') %>
-    <%- include('./partials/storeCard') %>
-    <%- include('./partials/storeCard') %>
-    <%- include('./partials/storeCard') %>
-    <%- include('./partials/storeCard') %>
-    <%- include('./partials/storeCard') %>
-    <%- include('./partials/storeCard') %>
+    <div class="pagination">
+        <button id="prevPage" class="btn">Previous</button>
+        <span id="pageInfo"></span>
+        <button id="nextPage" class="btn">Next</button>
+        </div>
     </div>
 
 
-    <footer class="mt-5">
-        <div class="container">
-            <hr>
-            <p>&copy; 2024 Your Store. All rights reserved.</p>
-        </div>
-    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>

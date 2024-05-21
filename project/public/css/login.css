@@ -2,13 +2,15 @@ body{
     background-color: #1E1E24;
     color: black;
     font-family: 'Poppins';
+    overflow-x: hidden;
 }
 
-.main {
+.loginMain {
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    color: black;
 }
 
 textarea{

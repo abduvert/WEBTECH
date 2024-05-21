@@ -2,7 +2,7 @@ body {
     background-color: #1E1E24;
     color: white;
     font-family: 'Poppins';
-    overflow-x: hidden; /* Prevent scrolling to the right */
+    overflow-x: hidden; 
 }
 
 html {
@@ -46,9 +46,6 @@ html::-webkit-scrollbar {
       
 }
 
-.search:hover{
-    
-}
 
 .overlay-input input {
     width: 400px;
@@ -494,7 +491,7 @@ button:active {
     justify-content: space-between;
 }
 
-.store,.topRate,.companies,.product{
+.storeNum,.topRate,.companies,.product{
     text-align: center;
     width: 50%;
     background: linear-gradient(to right, white, grey);

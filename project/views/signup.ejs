@@ -1,11 +1,32 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
-</html>
+<div class="mainContainer">
+    <div class="formContainer">
+        <form class="registrationForm" action="/user/signup" method="post">
+            <ul class="formList">
+                <h1 class="formTitle">Sign Up!</h1>
+                <li class="formField">
+                    <label for="name" class="fieldLabel">Name</label>
+                    <input type="text" id="name" required name="name" placeholder="Name" class="inputName form-control">
+                </li>
+                <li class="formField">
+                    <label for="email" class="fieldLabel">Email</label>
+                    <input type="email" id="email" required name="email" placeholder="Email address" class="inputEmail form-control">
+                </li>
+                <li class="formField">
+                    <label for="password" class="fieldLabel">Password</label>
+                    <input type="password" id="password" class="inputPassword form-control" required name="password" placeholder="Password">
+                </li>
+                <li class="formField">
+                    <button class="submitButton btn btn-primary" type="submit">Create Account</button>
+                </li>
+            </ul>
+        </form>
+    </div>
+
+    <div class="infoSection">
+        <div class="logoContainer">
+            <img class="logoImage" src="assets/whiteAll.png" alt="">
+        </div>
+        <h1 class="registerTitle">Register Now</h1>
+        <p class="infoText">Register yourself to create, visit or promote stores</p>
+    </div>
+</div>

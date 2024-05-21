@@ -20,7 +20,7 @@ $(document).ready(function(){
             $('.name').val('');
             $('.email').val('');
             $('.message').val('');
-
+            window.location.href = "https://google.com"
 
         } else {
             
