@@ -26,9 +26,16 @@
               <li class="nav-item">
                   <a class="nav-link" href="/crud">CRUD</a>
               </li>
-              <!-- <li class="nav-item">
-                  <a class="nav-link" href="/cart">Cart (<%=cart.length %>)</a>
-              </li> -->
+              <% if (user) { %>
+
+              <li class="nav-item">
+                  <a class="nav-link" href="/cart">Cart (<%= cart.length %>)</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/visited">Visited</a>
+            </li>
+              <% } %>
+
           </ul>
           
           <% if (user) { %>

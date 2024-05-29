@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin: 0;
+            padding: 0;
+        }
+
+        .cart-container {
+            display: flex;
+            flex-direction: row;
+            width: 80%;
+            margin-top: 20px;
+        }
+
+        .card {
+            display: flex;
+            flex-direction: column;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .card-img {
+            width: 100%;
+            height: auto;
+        }
+
+        .card-info {
+            padding: 16px;
+        }
+
+        .text-title {
+            font-size: 1.5em;
+            margin: 0;
+        }
+
+        .text {
+            font-size: 1em;
+            color: #555;
+        }
+
+        .text-price {
+            font-size: 1.2em;
+            color: #333;
+            margin-top: 8px;
+        }
+
+        .color-circle {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: #000;
+            display: inline-block;
+            margin-top: 8px;
+        }
+
+        .card-footer {
+            padding: 16px;
+            background-color: #f8f8f8;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .card-button {
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: #007bff;
+            border-radius: 50%;
+            color: white;
+            border: none;
+            outline: none;
+        }
+
+        .svg-icon {
+            fill: white;
+            width: 20px;
+            height: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Shopping Cart</h1>
+    <div class="cart-container">
+            <% products.forEach(product => { %>
+                <div class="card">
+                    <img class="card-img" src="/assets/head.png" alt="Product Image">
+                    <div class="card-info">
+                        <p class="text-title"><%= product.name %></p>
+                        <p class="text"><%= product.description %></p>
+                        <span class="text-price">$<%= product.price %></span>
+                        <div class="color-circle" style="background-color: '<%= product.color %>';"></div>
+                    </div>
+                    <div class="card-footer">
+                        <div class="card-button">
+                            <svg class="svg-icon" viewBox="0 0 20 20">
+                                <!-- SVG path code -->
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                
+            <% }); %>
+        
+    </div>
+</body>
+</html>

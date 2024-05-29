@@ -1,0 +1,15 @@
+<nav class="mynav navbar navbar-expand-lg em-1">
+    <div class="container-fluid">
+        <div class="d-flex flex-grow-1 contentNav">
+                <h2 class="userName">Welcome, <%= user.name %>!</h2>
+                <form class="searchForm form-inline my-2 my-lg-0" action="/store">
+                    <input class="form-control mr-sm-2 searchInput" type="search" placeholder="Search">
+                    <button class="searchBtn btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
+                </form>
+            </div>
+        <div>
+            <button class="addstore btn btn-outline-light my-2 my-sm-0" type="submit">Add Store</button>
+        </div>
+    </div>
+    
+</nav>

@@ -17,11 +17,11 @@ server.use(session({
     saveUninitialized: false,
     cookie: { secure: false }
 }));
-server.use(auth);
 server.use(express.json());
 server.use(cookieparser());
 server.use(express.static("public"));
 server.use(ejsLayouts);
+server.use(auth);
 server.set("view engine", "ejs");
 
 // Routes
@@ -36,6 +36,7 @@ server.use("/user/", userRouter);
 
 server.get("/", (req, res) => {
     res.render("home");
+    // res.render("index", { user: res.locals.user, cart: res.locals.cart });
 });
 
 server.get("/partials/navbar", (req, res) => {
@@ -54,18 +55,23 @@ server.get("/crud", (req, res) => {
     res.render("crud");
 });
 
-server.get("/cart", async (req, res) => {
-    let cart = req.cookies.cart
-    if(!cart) cart = []
-    let products = await Product.find({_id:{$in:cart}})
-    res.render("cart");
+server.get("/cart", auth, async (req, res) => {
+    let cart = res.locals.cart;
+    let products = await Product.find({ _id: { $in: cart } });
+    res.render("partials/cart", { products });
 });
+
+
 
 server.get("/contact", (req, res) => {
     res.render("contact");
 });
 
-server.get("/register", restrictToLoggedInUser("storeslist"),(req, res) => {
+server.get("/visited", (req, res) => {
+    res.render("visited");
+});
+
+server.get("/register",(req, res) => {
     res.render("signup");
 });
 

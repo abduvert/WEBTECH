@@ -10,14 +10,21 @@ function restrictToLoggedInUser(targetPage) {
   };
 }
 
+async function auth(req, res, next) {
+  let cart = [];
+  try {
+      cart = req.cookies.cart ? JSON.parse(req.cookies.cart) : [];
+  } catch (e) {
+      console.error("Error parsing cart cookie:", e);
+      cart = [];
+  }
 
-async function auth(req,res,next){
-  let cart = (req.cookies && req.cookies.cart)?req.cookies.cart:[]
-
-  if(!req.cookies || !req.cookies.cart) res.cookie("cart",[],{httpOnly:true})
-  res.locals.user = req.session.user; 
-  res.locals.cart = cart
-  next(); 
+  if (!req.cookies || !req.cookies.cart) {
+      res.cookie("cart", JSON.stringify([]), { httpOnly: true });
+  }
+  res.locals.user = req.session.user;
+  res.locals.cart = cart;
+  next();
 }
 
 
